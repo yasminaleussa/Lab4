@@ -19,7 +19,6 @@ namespace Lab4
             return sequence;
 
             List<T> list = new List<T>();
-
             foreach (var s in sequence)
             {
                if(s.Equals(value)) 
