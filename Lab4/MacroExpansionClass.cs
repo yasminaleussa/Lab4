@@ -21,11 +21,30 @@ namespace Lab4
             List<T> list = new List<T>();
             foreach (var s in sequence)
             {
-               if(s.Equals(value)) 
+                if (s.Equals(value))
                     list.AddRange(newValues);
-                    else list.Add(s);
+                else list.Add(s);
             }
             return list;
+
+            //Con Iterators
+
+            /* IEnumerator<T> _sequeEnumerator = sequence.GetEnumerator();
+             while (_sequeEnumerator.MoveNext())
+             {
+                 if (_sequeEnumerator.Current.Equals(value))
+                 {            
+                 IEnumerator<T> __newValEnum = newValues.GetEnumerator();
+                     while (__newValEnum.MoveNext())
+                     {
+                         list.Add(__newValEnum.Current);
+                     }
+                    //_newVaEnum.reset();
+                 }  
+                else list.Add(_sequeEnumerator.Current);
+             }
+                return list;
+            */
         }
     }
 }
